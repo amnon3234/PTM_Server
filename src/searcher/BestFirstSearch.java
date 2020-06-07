@@ -21,14 +21,17 @@ public class BestFirstSearch<T> extends CommonSearcher<T> {
 			if(searchable.isGoalState(curr))
 				return super.backTrace(curr);
 			List<State<T>> successors = searchable.getAllPossibleStates(curr);
-			for(State<T> successor : successors) 
-				if(!super.minHeap.contains(successor) && !visitedSet.contains(successor)) {
+			for(State<T> successor : successors) {
+				if (!super.minHeap.contains(successor) && !visitedSet.contains(successor)) {
 					successor.setFather(curr);
 					super.minHeap.add(successor);
-				}else if(!visitedSet.contains(successor) && successor.getsCost() < super.getCost(super.minHeap.iterator(), successor) ) {
+				} else if (!visitedSet.contains(successor) && successor.getsCost() < super.getCost(super.minHeap.iterator(), successor)) {
 					super.minHeap.remove(successor);
 					super.minHeap.add(successor);
-				}	
+				}
+				if(successor.getFather() == null)
+					successor.setFather(curr);
+			}
 		}
 		return null;
 	}

@@ -6,82 +6,90 @@ import java.util.List;
 
 public class FindGoalInMatrix implements Searchable<SPosition> {
 	//Data
-	private int[][] matrix;
-    private SPosition start;
-    private SPosition goal;
-    private int rowAmount, colAmount;
-   
-    //Constructor
-    public FindGoalInMatrix(List<int[]> matrix, SPosition start, SPosition goal) {
-        this.matrix = this.ListToMat(matrix);
-        this.start = start;
-        this.goal = goal;
-    }
-    
-    //Private Methods
-    private int[][] ListToMat(List<int[]> matrix){
-        this.rowAmount = matrix.size() ;
-        this.colAmount = matrix.get(0).length;
-        int[][] result = new int[this.rowAmount][this.colAmount];
-        for(int i = 0; i < this.rowAmount; i++) {
-            for(int j = 0; j< this.colAmount ; j++)
-            	result[i][j] = matrix.get(i)[j];        
-        }
-        return result;    
-    }
-    
-    //Override
-    @Override
-    public State<SPosition> getInitialState() {
-    	State<SPosition> start = new State<SPosition>(this.start);
-    	start.setsCost(0);
-    	start.setFather(null);
-    	return start;
-    }
- 
-    @Override
-    public boolean isGoalState(State<SPosition> state) {
-        return state.getsValue().equals(this.goal);
-    }
- 
-    @Override
-    public List<State<SPosition>> getAllPossibleStates(State<SPosition> cState) {
-        SPosition currentPosition = cState.getsValue();
-        int currentRow = currentPosition.getRow();
-        int currentCol =  currentPosition.getCol();
-       
-        List<State<SPosition>> result = new ArrayList<State<SPosition>>();
-        State<SPosition> temp;
-        if(currentRow != 0) { // Check up overflow
-        	temp = new State<SPosition>(new SPosition(currentRow - 1,currentCol));
-        	temp.setsCost(cState.getsCost() + this.matrix[currentRow - 1][currentCol]);
-        	temp.setFather(null);
-        	result.add(temp);
-        }
-        if(currentRow != rowAmount-1) {// Check down overflow
-            temp = new State<SPosition>(new SPosition(currentRow + 1,currentCol));
-        	temp.setsCost(cState.getsCost() + this.matrix[currentRow + 1][currentCol]);
-        	temp.setFather(null);
-        	result.add(temp);
-        }
-        if(currentCol != 0) {// Check left overflow
-            temp = new State<SPosition>(new SPosition(currentRow,currentCol - 1));
-        	temp.setsCost(cState.getsCost() + this.matrix[currentRow][currentCol - 1]);
-        	temp.setFather(null);
-        	result.add(temp);
-        }
-        if(currentCol != colAmount-1) {// Check right overflow
-        	temp = new State<SPosition>(new SPosition(currentRow,currentCol + 1));
-        	temp.setsCost(cState.getsCost() + this.matrix[currentRow][currentCol + 1]);
-        	temp.setFather(null);
-        	result.add(temp);
-        }
-       
-        return result;
-    }
-  
-    //Override
-    @Override
+	protected final int[][] matrix;
+	private final SPosition start;
+	private final SPosition goal;
+	protected int rowAmount, colAmount;
+
+	//Constructor
+	public FindGoalInMatrix(int[][] matrix, SPosition start, SPosition goal) {
+		this.rowAmount = matrix.length ;
+		this.colAmount = matrix[0].length;
+		this.matrix = matrix;
+		this.start = start;
+		this.goal = goal;
+	}
+
+	public FindGoalInMatrix(List<int[]> matrix, SPosition start, SPosition goal) {
+		this.matrix = this.ListToMat(matrix);
+		this.start = start;
+		this.goal = goal;
+	}
+
+	//Private Methods
+	private int[][] ListToMat(List<int[]> matrix){
+		this.rowAmount = matrix.size() ;
+		this.colAmount = matrix.get(0).length;
+		int[][] result = new int[this.rowAmount][this.colAmount];
+		for(int i = 0; i < this.rowAmount; i++) {
+			for(int j = 0; j< this.colAmount ; j++)
+				result[i][j] = matrix.get(i)[j];
+		}
+		return result;
+	}
+
+	//Override
+	@Override
+	public State<SPosition> getInitialState() {
+		State<SPosition> start = new State<SPosition>(this.start);
+		start.setsCost(0);
+		start.setFather(null);
+		return start;
+	}
+
+	@Override
+	public boolean isGoalState(State<SPosition> state) {
+		return state.getsValue().equals(this.goal);
+	}
+
+	@Override
+	public List<State<SPosition>> getAllPossibleStates(State<SPosition> cState) {
+		SPosition currentPosition = cState.getsValue();
+		int currentRow = currentPosition.getRow();
+		int currentCol =  currentPosition.getCol();
+
+		List<State<SPosition>> result = new ArrayList<State<SPosition>>();
+		State<SPosition> temp;
+		if(currentRow != 0) { // Check up overflow
+			temp = new State<SPosition>(new SPosition(currentRow - 1,currentCol));
+			temp.setsCost(cState.getsCost() + this.matrix[currentRow - 1][currentCol]);
+			temp.setFather(null);
+			result.add(temp);
+		}
+		if(currentRow != rowAmount-1) {// Check down overflow
+			temp = new State<SPosition>(new SPosition(currentRow + 1,currentCol));
+			temp.setsCost(cState.getsCost() + this.matrix[currentRow + 1][currentCol]);
+			temp.setFather(null);
+			result.add(temp);
+		}
+		if(currentCol != 0) {// Check left overflow
+			temp = new State<SPosition>(new SPosition(currentRow,currentCol - 1));
+			temp.setsCost(cState.getsCost() + this.matrix[currentRow][currentCol - 1]);
+			temp.setFather(null);
+			result.add(temp);
+		}
+		if(currentCol != colAmount-1) {// Check right overflow
+			temp = new State<SPosition>(new SPosition(currentRow,currentCol + 1));
+			temp.setsCost(cState.getsCost() + this.matrix[currentRow][currentCol + 1]);
+			temp.setFather(null);
+			result.add(temp);
+		}
+
+		return result;
+	}
+
+	//Override
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -91,9 +99,9 @@ public class FindGoalInMatrix implements Searchable<SPosition> {
 		result = prime * result + rowAmount;
 		result = prime * result + ((start == null) ? 0 : start.hashCode());
 		return result;
-	}  
-    
-    @Override
+	}
+
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

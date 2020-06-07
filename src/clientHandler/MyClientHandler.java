@@ -12,11 +12,9 @@ import java.util.List;
 
 import cacheMananger.CacheManager;
 import cacheMananger.FileCacheManager;
-import searchable.FindGoalInMatrix;
-import searchable.SPosition;
-import searchable.Searchable;
-import searchable.State;
+import searchable.*;
 import searcher.BestFirstSearch;
+import searcher.Dijkstra;
 import solver.SearchSolverAdapter;
 
 public class MyClientHandler implements ClientHandler {
@@ -78,7 +76,7 @@ public class MyClientHandler implements ClientHandler {
 		SPosition goal = new SPosition(goalArr[0],goalArr[1]);
 		
 		//Building the problem
-		FindGoalInMatrix problem = new FindGoalInMatrix(matrix, start, goal);
+		FindGoalInMatrix problem = new FindGoalInHeightMatrix(matrix, start, goal);
 		
     	//Solving if needed
 		String solution = this.cm.allreadySolved(problem);
