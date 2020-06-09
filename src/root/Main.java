@@ -14,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         final int port = 5555;
+        System.out.println("Listen on port: " + port);
         Server server = new MySerialServer(port);
         server.start(new MyClientHandler());
     }
