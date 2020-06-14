@@ -81,3 +81,13 @@ If we'll set the start point to be 114 (0,0) and the end point to be 38 (3,3) th
 Right, Down, Right, Right, Down, Down.
 
 
+## Built With
+
+* [InteliJ] - Java IDE
+* [Scene Builder](https://gluonhq.com/products/scene-builder/)  - Scene Builder 8.5.0
+
+
+## Authors
+* **Amnon Ashkenazy** - [LinkedIn](https://www.linkedin.com/in/orlevi13/) & **Iris Kella** - [LinkedIn](https://www.linkedin.com/in/edenshtein/)
+
+
