@@ -1,6 +1,5 @@
-# Flight Simulator Control 
-
-[![Presentation Project](/uml/example.png)](https://youtu.be/rWe9220DOY8)
+# Flight Simulator Control - Server Side  
+(//add youtube link)
 
 This is a project we developed during our advanced software programming course in our 2nd year.
 This project helped us to gain a higher level of knowledge in programming, with emphasis on design patterns and programming principles such as SOLID and GRASP, and finally developing our own JavaFX desktop application.
@@ -53,13 +52,13 @@ We created the ```CacheManager``` interface to manage the cache for us, with the
 
 ## UML
 //insert UML of Amnon
-![ServerClient Java UML](/project_uml.png "ServerClient Java UML")
+![ServerClient Java UML](UMLs/UML_Server.jpeg)
 
 ### Our Concerete Server
 Given a graph, it could solve it using [BFS](https://en.wikipedia.org/wiki/Best-first_search) algorithm ( which is already implemented in this project based on djkistra algorithm using manhattan distances ) or any other search algorithm.
 
 <p align="center">
-  <img src="/uml/server_bridgepattern.png" width="600">
+  <img src="UMLs/1_server_bridgepattern_concreteServer.png" width="600">
 </p>
 In our concrete server, given a weighted graph, it will run the search algorithm, and as an output it will return the cheapest route to the target.
 
@@ -88,6 +87,6 @@ Right, Down, Right, Right, Down, Down.
 
 
 ## Authors
-* **Amnon Ashkenazy** - [LinkedIn](https://www.linkedin.com/in/orlevi13/) & **Iris Kella** - [LinkedIn](https://www.linkedin.com/in/edenshtein/)
+* **Amnon Ashkenazy** - [LinkedIn](https://www.linkedin.com/in/amnon-ashkenazy-a1590b181/) & **Iris Kella** - [LinkedIn](https://www.linkedin.com/in/iris-kella-341549111/)
 
 
