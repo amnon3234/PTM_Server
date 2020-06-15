@@ -51,8 +51,7 @@ We created the ```CacheManager``` interface to manage the cache for us, with the
 * Saves the solution for the problem.
 
 ## UML
-//insert UML of Amnon
-![ServerClient Java UML](UMLs/UML_Server.jpeg)
+![Server Java UML](UMLs/UML_Server.jpeg)
 
 ### Our Concerete Server
 Given a graph, it could solve it using [BFS](https://en.wikipedia.org/wiki/Best-first_search) algorithm ( which is already implemented in this project based on djkistra algorithm using manhattan distances ) or any other search algorithm.
@@ -82,7 +81,7 @@ Right, Down, Right, Right, Down, Down.
 
 ## Built With
 
-* [InteliJ] - Java IDE
+* [InteliJ](https://www.jetbrains.com/idea/promo/ultimate/?gclid=Cj0KCQjwuJz3BRDTARIsAMg-HxVutxHcwMpa_KlPrw8UA2my1eSfvKwwKSCfuDTuYDe8N9JIMsRCtP8aAnFqEALw_wcB) - Java IDE
 * [Scene Builder](https://gluonhq.com/products/scene-builder/)  - Scene Builder 8.5.0
 
 
