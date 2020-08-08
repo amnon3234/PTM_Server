@@ -2,6 +2,8 @@
 
 > [Our project demonstration](https://www.youtube.com/watch?v=kfpkIxbvJyw)
 
+This is the sever side of the project press [here](https://github.com/amnon3234/PTM_Client) to see the client side
+
 ---
 
 ### Table of Contents
@@ -37,8 +39,8 @@ This project helped us to gain a higher level of knowledge in programming, with 
 
 #### Installation
 
-- Export git repositorie to eclipse or inelliji
-- Build and run the application
+- Export git repositories ( server and [client](https://github.com/amnon3234/PTM_Client)) to eclipse or inelliji
+- Build and run the applications
 
 [Back To The Top](#Table-of-Contents)
 
