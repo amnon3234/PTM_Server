@@ -1,3 +1,65 @@
+# Flight Simulator Control - Server Side   
+
+> [Our project demonstration](https://www.youtube.com/watch?v=kfpkIxbvJyw)
+
+---
+
+### Table of Contents
+
+- [Description](#description)
+- [How To Use](#How-To-Use)
+- [Author Info](#author-info)
+- [Images](#Images)
+
+---
+
+## Description
+
+This is a project we developed during our advanced software programming course in our 2nd year.
+This project helped us to gain a higher level of knowledge in programming, with emphasis on design patterns and programming principles such as SOLID and GRASP, and finally developing our own JavaFX desktop application.
+
+#### Languages
+
+- Java and javafx
+- xsml
+
+### Built With
+
+* [IntelliJ](https://www.jetbrains.com/idea/promo/ultimate/?gclid=Cj0KCQjwuJz3BRDTARIsAMg-HxVutxHcwMpa_KlPrw8UA2my1eSfvKwwKSCfuDTuYDe8N9JIMsRCtP8aAnFqEALw_wcB) - Java IDE
+* [Scene Builder](https://gluonhq.com/products/scene-builder/)  - Scene Builder 8.5.0
+
+
+[Back To The Top](#Table-of-Contents)
+
+---
+
+## How To Use
+
+#### Installation
+
+- Export git repositorie to eclipse or inelliji
+- Build and run the application
+
+[Back To The Top](#Table-of-Contents)
+
+---
+
+## Authors Info
+
+* **Amnon Ashkenazy** - [LinkedIn](https://www.linkedin.com/in/amnon-ashkenazy-a1590b181/) & **Iris Kella** - [LinkedIn](https://www.linkedin.com/in/iris-kella-341549111/)
+
+[Back To The Top](#Table-of-Contents)
+
+---
+
+## Images
+<p align="center"> <img src="SilverAccess.png"> </p>
+
+[Back To The Top](#Table-of-Contents)
+
+
+
+
 # Flight Simulator Control - Server Side  
 [Our project demonstration](https://www.youtube.com/watch?v=kfpkIxbvJyw)
 
@@ -79,13 +141,9 @@ If we'll set the start point to be 114 (0,0) and the end point to be 38 (3,3) th
 Right, Down, Right, Right, Down, Down.
 
 
-## Built With
-
-* [IntelliJ](https://www.jetbrains.com/idea/promo/ultimate/?gclid=Cj0KCQjwuJz3BRDTARIsAMg-HxVutxHcwMpa_KlPrw8UA2my1eSfvKwwKSCfuDTuYDe8N9JIMsRCtP8aAnFqEALw_wcB) - Java IDE
-* [Scene Builder](https://gluonhq.com/products/scene-builder/)  - Scene Builder 8.5.0
 
 
 ## Authors
-* **Amnon Ashkenazy** - [LinkedIn](https://www.linkedin.com/in/amnon-ashkenazy-a1590b181/) & **Iris Kella** - [LinkedIn](https://www.linkedin.com/in/iris-kella-341549111/)
+
 
 
